@@ -8,12 +8,6 @@ body {
   font-family: Arial, sans-serif;
 }
 .form-container {
-  /* max-width: 400px;
-  max-height: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px; */
   display: flex;
   justify-content: center;
   text-align: left;
@@ -97,17 +91,6 @@ input[type="password"] {
   border: 1px;
 }
 
-/* .emailr {
-  display: flex;
-  position: relative;
-  left: -20px;
-  z-index: 1;
-} */
-
-/* #mail {
-  left: 50px;
-} */
-
 .devchallenges {
   width: 130.17px;
   height: 18px;
@@ -164,6 +147,7 @@ input[type="password"] {
 
 .login {
   color: #2d9cdb;
+  
 }
 
 .footerend {

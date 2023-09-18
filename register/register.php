@@ -59,16 +59,9 @@
                     <span class="already">Adready a member?</span>
                     <span ><a class="login" href="/login/login.php">Login</a></span>
                 </div>
-
             </div>
-
-
-
-
-
         </form>
     </div>
-    <!-- <a href="/login/login.php">Iniciar sesión</a> -->
 </body>
 <div class="footerend">
     <footer>created by Carlos RV</footer>
