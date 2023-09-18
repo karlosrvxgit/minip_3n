@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil del usuario</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="stylep.css">
 </head>
 <body>
-    <h1>Perfil de Usuario</h1>
+    <span class="spanuno">Personal info</span>
+    <span class="basicif">Basic info, like your name and photo</span><br><br>
+    
     <?php
     session_start();
 
@@ -45,10 +47,16 @@
             $bio = $row['bio'];
             $phone = $row['phone'];
 
-        echo "<p><strong>Nombre:</strong> $name</p>";
-        echo "<p><strong>Email:</strong> $user_email</p>";
-        echo "<p><strong>Biografia:</strong> $bio</p>";
-        echo "<p><strong>Teléfono:</strong> $phone</p>";
+        echo "<div class='editarn' ><button  ><a href='/edit/edit.php' class='edit1' >Editar</a></button></div>";
+        echo "<p class='profile'>Profile<br><span class='span1'>Some info may be visible to other people
+        </span></p>";
+        echo "<p>PHOTO:</p>";
+        echo "<p>NAME:<span class='passwordinf'>$name</span></p>";
+        echo "<p>BIO:<span class='passwordinf'> $bio</span></p>";
+        echo "<p>PHONE:<span class='passwordinf'> $phone</span></p>";
+        echo "<p>EMAIL:<span class='passwordinf'>$user_email</span></p>";
+        echo "<p>PASSWORD:<span class='passwordinf'>$password ***********</span></p>";
+           
     } else {
         echo "No se encontró información del usuario.";
     }
@@ -62,7 +70,7 @@
     exit();
 }
     ?>
-    <a href='/edit/edit.php'>Editar Información</a>
-    <a href='/logout.php'>Cerrar Sesión</a>
+    <!-- <a href='/edit/edit.php'>Editar</a> -->
+    <!-- <a href='/logout.php'>Cerrar Sesión</a> -->
 </body>
 </html>

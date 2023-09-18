@@ -1,0 +1,179 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  .form-container {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    width: 473.83px;
+    height: 544.37px;
+    top: 253.65px;
+    left: 483.08px;
+    border-radius: 24px;
+    border: 1px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input[type="email"],
+  input[type="password"] {
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .remember-me {
+    display: flex;
+    align-items: center;
+  }
+  .remember-me input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  .forgot-password,
+  .register-link {
+    text-align: right;
+  }
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 356.48px;
+  
+    height: 38px;
+    left: 541.66px;
+    border-radius: 8px;
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.035em;
+    text-align: center;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .social-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .social-buttons button {
+    background-color: #fff;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border: 1px;
+  }
+  
+  /* .emailr {
+    display: flex;
+    position: relative;
+    left: -20px;
+    z-index: 1;
+  } */
+  
+  /* #mail {
+    left: 50px;
+  } */
+  
+  .devchallenges {
+    width: 130.17px;
+    height: 18px;
+    top: 263.87px;
+    left: 541.66px;
+    padding: 20px 0;
+  }
+  
+  .join {
+    width: 318.88px;
+    height: 50px;
+    top: 291.33px;
+    left: 541.66px;
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: -0.035em;
+    text-align: left;
+    color: #333333;
+  }
+  
+  .master {
+    width: 318.88px;
+    height: 66px;
+    top: 355.83px;
+    left: 541.66px;
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.035em;
+    text-align: left;
+  }
+  
+  #form2Example2 {
+    margin-bottom: 30px;
+  }
+  
+  .continue {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .already {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Loginend {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .login {
+    color: #2d9cdb;
+  }
+  
+  .footerend {
+    display: flex;
+    justify-content: center;
+    gap: 18rem;
+    padding: 5px 0;
+  }
+  
+  footer {
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: -0.035em;
+    color: #828282;
+  
+  }
+  

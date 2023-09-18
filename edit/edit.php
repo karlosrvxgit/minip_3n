@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Información</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/edit/stylee.css">
 </head>
+
 <body>
-<h1>Editar Información</h1>
-
-
     <?php
     session_start();
 
@@ -26,9 +25,8 @@
             $username = "root";
             $password = "";
             $dbname = "login_db";
-        
+
             $mysqli = new mysqli($hostname, $username, $password, $dbname);
-        
         } catch (\mysqli_sql_exception $e) {
             echo "Error: " . $e->getMessage();
         }
@@ -36,7 +34,7 @@
         // Consulta SQL para obtener la información actual del usuario
         $query = "SELECT name, bio, phone, email FROM users WHERE id = ?";
         $stmt = $mysqli->prepare($query);
-        // $stmt = $db->prepare($query);
+
         $stmt->bind_param('i', $user_id);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -49,20 +47,29 @@
             $bio = $row['bio'];
             $phone = $row['phone'];
 
+
             echo "<form action='edit_process.php' method='post'>";
-            echo "<label for='name'>Nombre:</label>";
-            echo "<input type='text' name='name' value='$name'><br>";
+            echo "<span class='changeinfo' >Change Info</span><br>";
+            echo "<span class='changeswill'>Changes will be reflected to every services
+            </span><br><br>";
+            echo "<div><img src='/imagenes/worker.svg' width='50px'</div><span class='photo' >CHANGE PHOTO</span><br>";
+            echo "<label for='name'>Name:</label> <br>";
+            echo "<input type='text' placeholder='Enter your name...' name='name' value='$name'><br><br>";
 
-            echo "<label for='email'>Email:</label>";
-            echo "<input type='email' name='email' value='$email'><br>";
+            echo "<label for='bio'>Bio:</label><br>";
+            echo "<textarea placeholder='Enter your bio...'name='bio' rows='4'>$bio</textarea><br><br>";
 
-            echo "<label for='bio'>Bio:</label>";
-            echo "<textarea name='bio' rows='4'>$bio</textarea><br>";
+            echo "<label for='phone'>Phone:</label><br>";
+            echo "<input type='text' placeholder='Enter your phone...' name='phone' value='$phone'><br><br>";
 
-            echo "<label for='phone'>Teléfono:</label>";
-            echo "<input type='text' name='phone' value='$phone'><br>";
+            echo "<label for='email'>Email:</label><br>";
+            echo "<input type='email' placeholder='Enter your email...' name='email' value='$email'><br><br>";
 
-            echo "<input type='submit' value='Guardar Cambios'>";
+            echo "<label for='password'>Password:</label><br>";
+            echo "<input type='email' placeholder='Enter your password...' name='email' value='$password'><br><br>";
+
+            echo "<input class='save' type='submit' value='Save'><br>";
+            echo "<div class='close'><a href='/logout.php'  >Cerrar Sesión</a></div>";
             echo "</form>";
         } else {
             echo "No se encontró información del usuario.";
@@ -71,13 +78,19 @@
         // Cierra la conexión a la base de datos
         $stmt->close();
         $mysqli->close();
-       
     } else {
         // Si el usuario no está autenticado, muestra un mensaje de error y un enlace para iniciar sesión
         echo "Debes iniciar sesión para editar tu información. <a href='/login/login.php'>Iniciar Sesión</a>";
     }
+
     ?>
-    
-    <a href="/logout.php">Cerrar Sesión</a>
+
+    <!-- <a href="/logout.php">Cerrar Sesión</a> -->
+
 </body>
+<div class="footerend">
+<footer>created by Carlos RV.</footer>
+<footer>devChallenges.io</footer>
+</div>
+
 </html>
